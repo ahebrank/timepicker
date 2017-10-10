@@ -1,4 +1,4 @@
-# Timepicker
+# jquery.timepicker Polyfill
 
 Provides a light wrapper for [jquery.timepicker](http://jonthornton.github.io/jquery-timepicker/)
 

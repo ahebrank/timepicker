@@ -2,7 +2,7 @@
     // TODO: make the format configurable
     var format = 'g:i A';
 
-    return Drupal.behaviors.timepicker = {
+    return Drupal.behaviors.jquery_timepicker = {
       attach: function(context, settings) {
         if (!Modernizr.inputtypes.time) {
             var $timefields = $('input[type="time"]');
