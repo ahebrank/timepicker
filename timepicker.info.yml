@@ -1,5 +1,0 @@
-name: Timepicker
-type: module
-description: Timepicker polyfill
-core: 8.x
-package: NewCity
