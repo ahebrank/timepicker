@@ -1,0 +1,12 @@
+polyfill:
+  version: 1.x
+  css:
+    base:
+      bower_components/jt.timepicker/jquery.timepicker.css: {}
+  js:
+    js/modernizr-time.js: {}
+    bower_components/jt.timepicker/jquery.timepicker.js: {}
+    js/timepicker.js: {}
+  dependencies:
+    - core/jquery.ui.datepicker
+    - core/misc/date

@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains timepicker.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function timepicker_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the timepicker module.
+    case 'help.page.timepicker':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Timepicker polyfill') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * @param [type] $form
+ * @param [type] $form_state
+ * @param [type] $form_id
+ * @return void
+ */
+function timepicker_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['#attached']['library'][] = 'timepicker/polyfill';
+}
