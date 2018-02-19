@@ -35,5 +35,5 @@ function jquery_timepicker_help($route_name, RouteMatchInterface $route_match) {
 function jquery_timepicker_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $config = \Drupal::config('jquery_timepicker.settings');
   $form['#attached']['library'][] = 'jquery_timepicker/polyfill';
-  $form['#attached']['drupalSettings']['jquery_timepicker'] = $config;
+  $form['#attached']['drupalSettings']['jquery_timepicker'] = $config->get();
 }

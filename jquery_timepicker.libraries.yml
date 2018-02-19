@@ -4,6 +4,7 @@ polyfill:
     base:
       bower_components/jt.timepicker/jquery.timepicker.css: {}
   js:
+    bower_components/moment/moment.js: {}
     bower_components/jt.timepicker/jquery.timepicker.js: {}
     js/timepicker.js: {}
   dependencies:
