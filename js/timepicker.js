@@ -1,10 +1,10 @@
-(function($) {
+(function($, drupalSettings) {
     // TODO: make the format configurable
     var format = 'g:i A';
 
     return Drupal.behaviors.jquery_timepicker = {
       attach: function(context, settings) {
-        if (!Modernizr.inputtypes.time) {
+        if (drupalSettings.jquery_timepicker.force_enable || !Modernizr.inputtypes.time) {
             var $timefields = $('input[type="time"]');
             $timefields.timepicker({
                 'timeFormat': format
@@ -27,4 +27,4 @@
         }
       }
     };
-  })(jQuery);
+  })(jQuery, drupalSettings);
