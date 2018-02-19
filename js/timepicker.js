@@ -13,7 +13,8 @@
                     .insertAfter($timefield)
                     .timepicker({
                         'step': 15,
-                        'timeFormat': 'g:ia'
+                        'timeFormat': 'g:ia',
+                        'scrollDefault': 'now'
                     })
                     .on('change', function() {
                         var $r = $(this);
