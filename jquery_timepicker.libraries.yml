@@ -11,3 +11,5 @@ polyfill:
     - core/modernizr
     - core/jquery.ui.datepicker
     - core/misc/date
+    - core/jquery
+    - core/jquery.once

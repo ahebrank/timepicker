@@ -3,7 +3,7 @@
       attach: function(context, settings) {
         if (drupalSettings.jquery_timepicker.force_enable || !Modernizr.inputtypes.time) {
             var $timefields = $('input[type="time"]');
-            $timefields.each(function() {
+            $timefields.once('timepicker-enabled').each(function() {
                 var $timefield = $(this);
                 $timefield.hide();
 
@@ -24,13 +24,17 @@
                         $i
                             .val(f)
                             .attr('value', f);
-
                     });
 
                 // on load
                 var v = $timefield.val();
                 if (v) {
                     $replace.val(moment(v, 'HH:mm:ss').format('h:mma'));
+                }
+
+                // propagate error
+                if ($timefield.hasClass('error')) {
+                    $replace.addClass('error');
                 }
             });
         }
