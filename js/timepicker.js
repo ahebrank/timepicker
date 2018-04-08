@@ -8,7 +8,7 @@
                 $timefield.hide();
 
                 // replace the actual time field with a picker-enabled text field
-                var $replace = $('<input type="text" class="form-text" data-timepicker-replacement>');
+                var $replace = $('<input type="text" class="form-text" placeholder="9:00am" data-timepicker-replacement>');
                 $replace
                     .insertAfter($timefield)
                     .timepicker({
