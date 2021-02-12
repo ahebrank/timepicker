@@ -13,3 +13,5 @@ polyfill:
     - core/misc/date
     - core/jquery
     - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
